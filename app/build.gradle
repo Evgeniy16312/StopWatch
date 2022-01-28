@@ -29,9 +29,22 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
+    // Koin
+    // Текущая версия библиотеки
+    def koin_version = "3.1.2"
+    // Основная библиотека
+    implementation "io.insert-koin:koin-core:$koin_version"
+    // Koin для поддержки Android (Scope,ViewModel ...)
+    implementation "io.insert-koin:koin-android:$koin_version"
+    // Для совместимости с Java
+    implementation "io.insert-koin:koin-android-compat:$koin_version"
 
 //Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0"

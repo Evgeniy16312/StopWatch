@@ -1,4 +1,4 @@
-package com.example.stopwatch
+package com.example.stopwatch.enity
 
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.MutableStateFlow
